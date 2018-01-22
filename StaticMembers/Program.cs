@@ -10,17 +10,24 @@ namespace StaticMembers
     {
         static void Main(string[] args)
         {
-            CreateCats(99);
-            Console.WriteLine("CatCount: " + Cat.CatCount());
-        }
 
-        static void CreateCats(int num)
-        {
-            int i;
-            for(i = 0; i < num; i++)
+            double number = 0;
+            string line = Console.ReadLine();
+
+            bool result = Double.TryParse(line, out number);
+            if (result)
             {
-                Cat cat = new Cat();
+                Console.WriteLine("Success: " + number);
             }
+            else
+            {
+                Console.WriteLine("NaN!");
+            }
+            
+            //Math.Round saadaan arvo pyöristymään
+
+            
+            
         }
     }
 }
